@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="Main_page.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <button id="popupBtn" class="menu-btn">☰</button>
+        <div class="logo">My Logo</div>
+    </div>
+
+    <!-- Side Popup Panel -->
+    <div id="sidePanel" class="side-panel">
+        <button id="closeBtn" class="close-btn">✖</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to the Main Page</h1>
+        <p>This is your main content area.</p>
+    </div>
+
+    <!-- JavaScript for Popup Functionality -->
+    <script>
+        const popupBtn = document.getElementById('popupBtn');
+        const sidePanel = document.getElementById('sidePanel');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Open side panel
+        popupBtn.addEventListener('click', () => {
+            sidePanel.style.left = '0';
+        });
+
+        // Close side panel
+        closeBtn.addEventListener('click', () => {
+            sidePanel.style.left = '-250px';
+        });
+    </script>
+</body>
+</html>
+<!--claudia croitoru costum de latex--> 
