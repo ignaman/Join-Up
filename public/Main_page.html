@@ -7,46 +7,430 @@
     <link rel="stylesheet" href="Main_page.css">
 </head>
 <body>
-    <!-- Top Navigation Bar -->
+    <!-- Navbar -->
     <div class="navbar">
-        <button id="popupBtn" class="menu-btn">☰</button>
-        <div class="logo">My Logo</div>
+        <button class="menu-btn">&#9776;</button>
     </div>
 
-    <!-- Side Popup Panel -->
-    <div id="sidePanel" class="side-panel">
-        <button id="closeBtn" class="close-btn">✖</button>
+    <!-- Side Panel (Menu) -->
+    <div class="side-panel">
         <h2>Menu</h2>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">Founders</a></li>
+            <li><a href="#target">Target</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="map-btn">
+            <a href="map.html" class="map-link">🗺️</a>
+        </button> <!-- New Map Button -->
+
+
+
+
+
+        
+        <button class="add-event-btn" id="openAddEventPopup">Add Event</button>
+        <div class="add-event-popup" id="addEventPopup">
+            <div class="add-event-content">
+                <button class="close-add-event-popup">&times;</button>
+                <h3>Add a New Event</h3>
+                <form id="addEventForm">
+                    <label for="eventName">Event Name:</label>
+                    <input type="text" id="eventName" name="eventName" required>
+        
+                    <label for="eventDate">Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+        
+                    <label for="eventCounty">County:</label>
+                    <input type="text" id="eventCounty" name="eventCounty" required>
+        
+                    <label for="peopleNeeded">People Needed:</label>
+                    <input type="number" id="peopleNeeded" name="peopleNeeded" required>
+
+                    <label for="eventDetails">Details:</label>
+                    <input type="text" id="eventDetails" name="eventDetails" required>
+        
+                    <button type="submit" class="send-event-btn">Send</button>
+                </form>
+            </div>
+        </div>
+        <button class="profile-btn">&#128100;</button> <!-- Profile Icon -->
+    </div>
+
+    <!-- Profile Popup -->
+    <div class="profile-popup">
+    <div class="profile-content">
+        <button class="close-popup-btn">&times;</button>
+        <h3>Your Profile</h3>
+        <div class="profile-details">
+            <img src="no_photo.png" alt="Profile Photo" class="profile-photo">
+            <h4>Username</h4>
+            <p>Email: example@mail.com</p>
+        </div>
+        <a href="your-events.html" class="your-events-btn">Your Events</a>
+        <!-- New Skills Section -->
+        <div class="skills-section">
+            <h4>Skills Required for Volunteering</h4>
+            <form id="skills-form">
+                <div class="skill">
+                    <label for="skill-1">Skill 1: Web Development</label>
+                    <select id="skill-1" name="skill-1" class="skill-level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="skill">
+                    <label for="skill-2">Skill 2: Communication</label>
+                    <select id="skill-2" name="skill-2" class="skill-level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="skill">
+                    <label for="skill-3">Skill 3: Event Planning</label>
+                    <select id="skill-3" name="skill-3" class="skill-level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="Join-Up Logo">
     </div>
 
     <!-- Main Content -->
-    <div class="content">
-        <h1>Welcome to the Main Page</h1>
-        <p>This is your main content area.</p>
+    <div class="content" id="home">
+        <h1>Welcome to Join-Up</h1>
+        <h2>Where connections are made</h2>
+        <div class="scroll-down-container">
+            <p class="scroll-text">Scroll Down</p>
+            <div class="scroll-arrows">
+                <div class="arrow">&#8595;</div>
+                <div class="arrow">&#8595;</div>
+                <div class="arrow">&#8595;</div>
+            </div>
+        </div>
     </div>
 
-    <!-- JavaScript for Popup Functionality -->
+    <!-- About Us Section -->
+    <section class="about-us" id="about-us">
+        <h2>About Us</h2>
+        <div class="developer-container">
+            <!-- Developer 1 -->
+            <div class="developer-card">
+                <img src="no_photo.png" alt="Developer 1">
+                <h3>Ranghetean Stefan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+            <!-- Developer 2 -->
+            <div class="developer-card">
+                <img src="no_photo.png" alt="Developer 2">
+                <h3>Faur Alexandru</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+            <!-- Developer 3 -->
+            <div class="developer-card">
+                <img src="no_photo.png" alt="Developer 3">
+                <h3>Igna Bogdan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+            <!-- Developer 4 -->
+            <div class="developer-card">
+                <img src="no_photo.png" alt="Developer 4">
+                <h3>Grigore Cristian</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Target Section -->
+    <section class="our-target" id="target">
+        <div class="target-content">
+            <img src="Volunteer_photo.jpg" alt="Our Target">
+            <div class="target-text">
+                <h2>Our Target</h2>
+                <p>We created this web page so people can create events and other people can enroll as volunteers without being part of a volunteer club where they need to pay a tax to be part of.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Events Section -->
+<section class="events" id="events">
+    <h2>Events</h2>
+    <p>Explore events happening across different regions of Romania.</p>
+
+    <div class="events-container">
+        <!-- Left Column: Region Selection and Specific Events -->
+        <div class="left-column">
+            <h3>Select a Region</h3>
+            <div class="region-selection">
+                <label for="region">Choose a Region:</label>
+                <select id="region" class="region-dropdown">
+                    <option value="bucharest">Bucharest</option>
+                    <option value="cluj">Cluj-Napoca</option>
+                    <option value="iasi">Iași</option>
+                    <option value="timisoara">Timișoara</option>
+                    <option value="constanta">Constanța</option>
+                    <option value="brasov">Brașov</option>
+                    <!-- Add more regions as needed -->
+                </select>
+            </div>
+            <div id="specific-events" class="specific-events">
+                <!-- This section will display events based on the selected region -->
+                <h3>Events in Selected Region</h3>
+                <ul id="region-events-list">
+                    <!-- Region-specific events will be populated here dynamically -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Column: All Events -->
+        <div class="right-column">
+            <h3>All Events Across Romania</h3>
+            <ul>
+                <li>Bucharest Art Exhibition - Bucharest</li>
+                <li>Cluj Film Festival - Cluj-Napoca</li>
+                <li>Iași International Music Festival - Iași</li>
+                <li>Timișoara Carnival - Timișoara</li>
+                <li>Constanța Beach Volleyball Championship - Constanța</li>
+                <li>Brașov Medieval Fair - Brașov</li>
+                <!-- Add more events as needed -->
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="gallery" class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="photo-container">
+        <!-- Photo items will go here -->
+        
+        <!-- Add more photos as needed -->
+    </div>
+    <button class="add-photo-btn">Add Photo</button>
+</section>
+<div class="photo-item" data-filename="photo1.jpg">
+    <img src="photo1.jpg" alt="Event Photo">
+    <button class="delete-photo-btn">&times;</button>
+</div>
+
+
+<!-- Add Photo Popup -->
+<div id="addPhotoPopup" class="popup">
+    <div class="popup-header">
+        <h2>Add Photo</h2>
+        <button class="close-popup-btn">&times;</button>
+    </div>
+    <input type="file" id="photoUpload" accept="image/*">
+    <button class="upload-photo-btn">Upload</button>
+</div>
+
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email: contact@yourdomain.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Address: 123 Your Street, City, Country</p>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon">Facebook</a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
     <script>
-        const popupBtn = document.getElementById('popupBtn');
-        const sidePanel = document.getElementById('sidePanel');
-        const closeBtn = document.getElementById('closeBtn');
+        const menuBtn = document.querySelector('.menu-btn');
+        const sidePanel = document.querySelector('.side-panel');
+        const profileBtn = document.querySelector('.profile-btn');
+        const profilePopup = document.querySelector('.profile-popup');
+        const closePopupBtn = document.querySelector('.close-popup-btn');
 
-        // Open side panel
-        popupBtn.addEventListener('click', () => {
-            sidePanel.style.left = '0';
+        menuBtn.addEventListener('click', () => {
+            const currentLeft = sidePanel.style.left;
+            sidePanel.style.left = currentLeft === '0px' || currentLeft === '' ? '-250px' : '0';
         });
 
-        // Close side panel
-        closeBtn.addEventListener('click', () => {
-            sidePanel.style.left = '-250px';
+        // Open Profile Popup
+        profileBtn.addEventListener('click', () => {
+            profilePopup.style.display = 'block';
         });
+
+        // Close Profile Popup
+        closePopupBtn.addEventListener('click', () => {
+            profilePopup.style.display = 'none';
+        });
+	// Make the profile popup draggable
+var popup = document.querySelector('.profile-popup');
+var content = document.querySelector('.profile-popup .profile-content');
+
+// Variables to store the initial mouse position
+var offsetX, offsetY, isDragging = false;
+
+// When the mouse is pressed down on the popup, start dragging
+content.addEventListener('mousedown', function (e) {
+    // Check if the click is on the header or content area for dragging
+    isDragging = true;
+    
+    // Calculate the offset between the mouse pointer and the top-left corner of the popup
+    offsetX = e.clientX - popup.offsetLeft;
+    offsetY = e.clientY - popup.offsetTop;
+    
+    // Change cursor to indicate dragging
+    popup.style.cursor = 'grabbing';
+});
+
+// When the mouse is moving and dragging is enabled, move the popup
+document.addEventListener('mousemove', function (e) {
+    if (isDragging) {
+        // Move the popup to follow the mouse
+        popup.style.left = (e.clientX - offsetX) + 'px';
+        popup.style.top = (e.clientY - offsetY) + 'px';
+    }
+});
+
+// When the mouse button is released, stop dragging
+document.addEventListener('mouseup', function () {
+    isDragging = false;
+    popup.style.cursor = 'move'; // Reset cursor
+});// Make the profile popup draggable
+var popup = document.querySelector('.profile-popup');
+var content = document.querySelector('.profile-popup .profile-content');
+
+// Variables to store the initial mouse position
+var offsetX, offsetY, isDragging = false;
+
+// When the mouse is pressed down on the popup, start dragging
+content.addEventListener('mousedown', function (e) {
+    // Check if the click is on the header or content area for dragging
+    isDragging = true;
+    
+    // Calculate the offset between the mouse pointer and the top-left corner of the popup
+    offsetX = e.clientX - popup.offsetLeft;
+    offsetY = e.clientY - popup.offsetTop;
+    
+    // Change cursor to indicate dragging
+    popup.style.cursor = 'grabbing';
+});
+
+// When the mouse is moving and dragging is enabled, move the popup
+document.addEventListener('mousemove', function (e) {
+    if (isDragging) {
+        // Move the popup to follow the mouse
+        popup.style.left = (e.clientX - offsetX) + 'px';
+        popup.style.top = (e.clientY - offsetY) + 'px';
+    }
+});
+
+// When the mouse button is released, stop dragging
+document.addEventListener('mouseup', function () {
+    isDragging = false;
+    popup.style.cursor = 'move'; // Reset cursor
+});
+document.getElementById('region').addEventListener('change', function () {
+    let selectedRegion = this.value;
+    let regionEventsList = document.getElementById('region-events-list');
+    
+    // Clear previous events
+    regionEventsList.innerHTML = '';
+
+    // Populate region-specific events based on the selected region
+    let events = {
+        bucharest: ['Bucharest Art Exhibition', 'Bucharest Tech Meet-Up', 'Bucharest Music Festival'],
+        cluj: ['Cluj Film Festival', 'Cluj Digital Summit', 'Cluj Night Market'],
+        iasi: ['Iași International Music Festival', 'Iași University Lectures', 'Iași Fashion Week', 'Iași University Lectures', 'Iași Fashion Week'],
+        timisoara: ['Timișoara International Film Festival', 'Timișoara Tech Conference', 'Timișoara Carnival'],
+        constanta: ['Constanța Summer Music Festival', 'Constanța Beach Volleyball Championship', 'Constanța Cultural Expo'],
+        brasov: ['Brașov Medieval Fair', 'Brașov Ski Championship', 'Brașov Mountain Music Fest']
+    };
+
+    if (events[selectedRegion]) {
+        events[selectedRegion].forEach(event => {
+            let li = document.createElement('li');
+            li.textContent = event;
+            regionEventsList.appendChild(li);
+        });
+    }
+});
+// Open Add Event Popup
+document.getElementById('openAddEventPopup').addEventListener('click', function() {
+    document.getElementById('addEventPopup').style.display = 'block';
+});
+
+// Close Add Event Popup
+document.querySelector('.close-add-event-popup').addEventListener('click', function() {
+    document.getElementById('addEventPopup').style.display = 'none';
+});
+
+// Optional: Close popup when clicking outside
+window.onclick = function(event) {
+    if (event.target == document.getElementById('addEventPopup')) {
+        document.getElementById('addEventPopup').style.display = 'none';
+    }
+};
+// Open and Close Gallery Popup
+const addPhotoBtn = document.querySelector(".add-photo-btn");
+const addPhotoPopup = document.getElementById("addPhotoPopup");
+const closeGalleryPopupBtn = addPhotoPopup.querySelector(".close-popup-btn"); // Renamed to avoid conflict
+
+addPhotoBtn.addEventListener("click", () => {
+    addPhotoPopup.style.display = "block";
+});
+
+closeGalleryPopupBtn.addEventListener("click", () => {
+    addPhotoPopup.style.display = "none";
+});
+
+// Upload Photo Functionality
+const uploadPhotoBtn = addPhotoPopup.querySelector(".upload-photo-btn");
+const photoContainer = document.querySelector(".photo-container");
+
+uploadPhotoBtn.addEventListener("click", () => {
+    const photoUpload = document.getElementById("photoUpload");
+    const file = photoUpload.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const photoItem = document.createElement("div");
+            photoItem.classList.add("photo-item");
+            photoItem.innerHTML = `<img src="${event.target.result}" alt="New Event Photo">`;
+            photoContainer.appendChild(photoItem);
+            addPhotoPopup.style.display = "none"; // Close popup after adding
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
+
+
+// Handle Form Submission (placeholder functionality)
+document.getElementById('addEventForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Event information submitted!');
+    document.getElementById('addEventPopup').style.display = 'none';
+});
+
+
+
+
+
     </script>
 </body>
 </html>
-<!--claudia croitoru costum de latex--> 
