@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <link rel="stylesheet" href="Register_page.css">
-    <script src="Register_page.js"></script>
+    <script src="Register_page.js" defer></script>
+    
+    <style>
+        #error-username, #error-email, #error-password {
+            display: none;
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <div class="register-container">
         <h2>Register</h2>
-        <form action="#" method="POST" onsubmit="event.preventDefault(); SavaDatasToDataBase();">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <h1 id="error-username">Username is already taken</h1>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <h1 id="error-email">Email has already been used</h1>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <h1 id="error-password">The passwords do not match</h1>
-
-            <button id="RegisterButton" type="submit">Register</button>
-            <p class="HaveAcc">Already have an account? <a href="login_page.html">Login now!</a></p>
+        <form id="registerForm" onsubmit="saveDataToDatabase(event)">
+    <div>
+        <input type="text" id="username" placeholder="Username">
+        <span id="error-username" class="error-message" style="display: none; color: red;"></span>
+    </div>
+    <div>
+        <input type="email" id="email" placeholder="Email">
+        <span id="error-email" class="error-message" style="display: none; color: red;"></span>
+    </div>
+    <div>
+        <input type="password" id="password" placeholder="Password">
+    </div>
+    <div>
+        <input type="password" id="confirm-password" placeholder="Confirm Password">
+        <span id="error-password" class="error-message" style="display: none; color: red;"></span>
+    </div>
+    <button id="RegisterButton">Register</button>
+    <p class="HaveAcc">Already have an account? <a href="Login_page.html">Login now!</a></p>
+    
         </form>
+
+        
+        
     </div>
 </body>
 </html>
